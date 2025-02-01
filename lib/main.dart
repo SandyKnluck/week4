@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:week4/api_test/simple_api_call.dart';
 import 'package:week4/form/registration_form.dart';
 
 void main() {
@@ -12,12 +13,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-        useMaterial3: true,
-      ),
-      home: const RegistrationForm(),
+      home: const SimpleApiCall(),
     );
   }
 }
