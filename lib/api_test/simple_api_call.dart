@@ -19,7 +19,7 @@ class _SimpleApiCallState extends State<SimpleApiCall> {
       isLoaded = false;
     });
     try {
-      await Future.delayed(Duration(seconds: 1));
+      await Future.delayed(const Duration(seconds: 1));
       var response = await http
           .get(Uri.parse('https://jsonplaceholder.typicode.com/users/'));
       if (response.statusCode == 200) {
@@ -40,6 +40,7 @@ class _SimpleApiCallState extends State<SimpleApiCall> {
     }
   }
 
+  @override
   void initState() {
     super.initState();
     fetchData();
@@ -48,7 +49,7 @@ class _SimpleApiCallState extends State<SimpleApiCall> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(title: Text('Simple API Call')),
+        appBar: AppBar(title: const Text('Simple API Call')),
         body: isLoaded
             ? ListView.separated(
                 separatorBuilder: (BuildContext context, int index) =>
@@ -58,7 +59,7 @@ class _SimpleApiCallState extends State<SimpleApiCall> {
                   return ListTile(
                     leading: Text('${users[index].id}'),
                     title: Text(users[index].name),
-                    subtitle: Text('${users[index].email}'),
+                    subtitle: Text(users[index].email),
                     trailing: Text('(${users[index].username})'),
                   );
                 })

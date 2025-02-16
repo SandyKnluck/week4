@@ -40,7 +40,7 @@ class _RegistrationFormState extends State<RegistrationForm> {
                     return null;
                   },
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 10,
                 ),
                 TextFormField(
@@ -57,12 +57,12 @@ class _RegistrationFormState extends State<RegistrationForm> {
                     return null;
                   },
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 12,
                 ),
                 Container(
                   alignment: Alignment.topLeft,
-                  child: Text(
+                  child: const Text(
                     'Gender',
                     style: TextStyle(
                       fontSize: 14,
@@ -127,7 +127,7 @@ class _RegistrationFormState extends State<RegistrationForm> {
                     });
                   },
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 20,
                 ),
                 ElevatedButton(
